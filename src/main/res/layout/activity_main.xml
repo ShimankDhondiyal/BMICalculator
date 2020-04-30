@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_weight"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:hint="Enter weight"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/txtView_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtView_weight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_height"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:hint="Enter height"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtView_height"
+        app:layout_constraintTop_toTopOf="@+id/editText_weight" />
+
+    <TextView
+        android:id="@+id/txtView_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginBottom="69dp"
+        android:text="Height"
+        app:layout_constraintBottom_toTopOf="@+id/txtView_bmi"
+        app:layout_constraintEnd_toStartOf="@+id/editText_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtView_weight" />
+
+    <TextView
+        android:id="@+id/txtView_bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="89dp"
+        android:text="BMI"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_output"
+        app:layout_constraintEnd_toStartOf="@+id/textView_output"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtView_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:text="Weight"
+        app:layout_constraintEnd_toStartOf="@+id/editText_weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_output"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="221dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtView_bmi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rad_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_output">
+
+        <RadioButton
+            android:id="@+id/radioButton_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pound/inch" />
+
+        <RadioButton
+            android:id="@+id/radioButton_metric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kilogram/meter" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Calculate BMI"
+        app:layout_constraintStart_toStartOf="@+id/rad_group"
+        app:layout_constraintTop_toBottomOf="@+id/rad_group" />
+
+    <Button
+        android:id="@+id/button_advice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:text="Get Advice"
+        app:layout_constraintStart_toStartOf="@+id/button_calculate"
+        app:layout_constraintTop_toBottomOf="@+id/button_calculate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
